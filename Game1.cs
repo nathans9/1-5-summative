@@ -64,6 +64,13 @@ namespace _1_5_summative
             screen = Screen.Intro;
             this.Window.Title = "Puffle Mania";
             Window.AllowUserResizing = false;
+            if (!File.Exists("highscore.txt"))
+            {
+                using (FileStream fs = File.Create("highscore.txt"))
+                {
+                    
+                }
+            }
             for (int i = 0; i < 300; i++)
             {
                 Puffle puffle = new Puffle();
